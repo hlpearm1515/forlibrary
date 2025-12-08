@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "Word-Processing"
 version = "0.0.1"
 authors = [
-  { name="man", email="--" },
+  { name="man", email="redboy1215@hanyang.ac.kr" },
 ]
 description = "A library for word processing"
 readme = "README.md"
