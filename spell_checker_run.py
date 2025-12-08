@@ -11,10 +11,10 @@ def load_dictionary(filename):
                 word = line.strip()
                 if word: # 빈 줄은 제외
                     words.append(word)
-        print(f"📂 '{filename}'에서 {len(words)}개의 단어를 로딩했습니다.")
+        print(f"'{filename}'에서 {len(words)}개의 단어를 로딩했습니다.")
         return words
     except FileNotFoundError:
-        print(f"❌ 에러: '{filename}' 파일을 찾을 수 없습니다.")
+        print(f"에러: '{filename}' 파일을 찾을 수 없습니다.")
         sys.exit()
 
 def main():
@@ -23,7 +23,6 @@ def main():
     checker = SimpleSpellChecker(dictionary)
     
     print("=== 맞춤법 교정기 테스트 (종료하려면 'exit' 입력) ===")
-    print(f"현재 사전 단어: {dictionary}")
     print("-" * 50)
 
     while True:
@@ -42,9 +41,9 @@ def main():
         
         # 결과 출력
         if user_input == result:
-            print(f"✅ 정확한 단어입니다: {result}")
+            print(f"정확한 단어입니다: {result}")
         else:
-            print(f"🔧 교정된 단어: {user_input} -> {result}")
+            print(f"교정된 단어: {user_input} -> {result}")
 
 if __name__ == "__main__":
     try:
