@@ -151,4 +151,4 @@ if __name__ == "__main__":
             break
         
         result = correct_spacing(text)
-        print(f"👉 교정 결과: {result}")
+        print(f" 교정 결과: {result}")
