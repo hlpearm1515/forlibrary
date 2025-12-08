@@ -20,3 +20,6 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/hlpearm1515/forlibrary"
 Issues = "https://github.com/hlpearm1515/forlibrary/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/convertion"]
