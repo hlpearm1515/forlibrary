@@ -70,34 +70,48 @@ print(clean_text(text, mode="star"))
 ```
 
 ## API 상세설명
+
 1. 단어 빈도수 세기
 함수정의:
+
 ```python
 count_word_frequency(sentence: str) -> collections.Counter[str]
 ```
+
 기능: 문장 안에서 한글/영어/숫자로 이루어진 단어를 추출하고, 각 단어가 몇 번 등장했는지 빈도수를 계산해 반환합니다. 영문자는 모두 소문자로 변환하여 처리합니다.
 
 2. 띄어쓰기 교정
+
 함수정의:
+
 ```python
 correct_spacing(text: str) -> str
 ```
+
 기능: 문장에서 틀리는 띄어쓰기 패턴을 교정합니다.
 
 3. 맞춤법 교정
+
 함수정의:
+
 ```python
 check(self, word: str) -> str
 ```
+
 기능: 입력한 단어가 사전에 있으면 그대로 반환하고, 없으면 Levenshtein 거리를 이용해 가장 비슷한 단어 한 개를 반환
+
 주의사항: pip install python-Levenshtein 필요
 
 4. 욕설 단어 처리
+
 함수정의:
+
 ```python
 clean_text(text: str, mode: str) -> str
 ```
+
 기능: 입력 문장에서 욕설을 탐지하여 두 가지 방식 중 하나로 치환합니다.
+
 - mode="replace": 욕설을 미리 정의된 순화된 단어로 바꿉니다.
 
 - mode="star": 욕설의 길이에 맞게 별표(*)로 치환합니다.
